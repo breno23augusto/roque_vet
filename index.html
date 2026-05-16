@@ -4,24 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roque Serviços Veterinários | Precisão e Cuidado</title>
+
+    <!-- Primary SEO -->
+    <title>Roque Serviços Veterinários | Patologia e Citologia Diagnóstica a Campo</title>
     <meta name="description"
-        content="Centro especializado em transcirurgia, citologia diagnóstica e coleta de amostras biológicas para animais">
+        content="Médica veterinária autônoma especializada em patologia transcirúrgica, citologia diagnóstica e coleta de amostras biológicas — atendimento prestado diretamente na clínica parceira.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://roquevet.com.br/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Roque Serviços Veterinários | Patologia a Campo">
+    <meta property="og:description"
+        content="Serviços veterinários diagnósticos prestados a campo: patologia transcirúrgica, citologia e coleta de amostras.">
+    <meta property="og:url" content="https://roquevet.com.br/">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="https://roquevet.com.br/taina.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Roque Serviços Veterinários">
+    <meta name="twitter:description"
+        content="Serviços veterinários a campo: patologia, citologia e coleta de amostras.">
+    <meta name="twitter:image" content="https://roquevet.com.br/taina.jpg">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VeterinaryCare",
+        "name": "Roque Serviços Veterinários",
+        "description": "Médica veterinária autônoma especializada em patologia transcirúrgica, citologia diagnóstica e coleta de amostras biológicas.",
+        "url": "https://roquevet.com.br",
+        "telephone": "+556492841805",
+        "email": "taina@roquevet.com.br",
+        "image": "https://roquevet.com.br/taina.jpg",
+        "areaServed": {
+            "@type": "State",
+            "name": "Goiás"
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "Tainá Roque",
+            "jobTitle": "Médica Veterinária Patologista"
+        },
+        "priceRange": "$$",
+        "sameAs": [
+            "https://wa.me/556492841805"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços Veterinários",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Patologia Transcirúrgica"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Análise Citológica"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Coleta Citológica"}}
+            ]
+        }
+    }
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap"
+            rel="stylesheet">
+    </noscript>
 
-    <!-- Animate On Scroll -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Font Awesome (non-blocking) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
 
     <style>
         :root {
@@ -80,6 +143,21 @@
             background: var(--branco);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
             padding: 1rem 5%;
+        }
+
+        /* Inline SVG Icons */
+        .icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            fill: currentColor;
+            vertical-align: -0.125em;
+            flex-shrink: 0;
+        }
+
+        .icon-lg {
+            width: 2.5rem;
+            height: 2.5rem;
         }
 
         .nav-logo {
@@ -499,132 +577,6 @@
             font-size: 0.95rem;
         }
 
-        /* Testimonials */
-        .testimonials {
-            background: var(--azul-rox);
-            color: var(--branco);
-            text-align: center;
-        }
-
-        .testimonials h2 {
-            color: var(--branco);
-        }
-
-        .testimonials p {
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .testimonials .section-divider {
-            background: var(--branco);
-        }
-
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 2.5rem;
-            border-radius: 20px;
-            margin: 0 1rem;
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .testimonial-card .quote {
-            font-size: 1.25rem;
-            font-style: italic;
-            line-height: 1.8;
-        }
-
-        .testimonial-card .author {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .testimonial-card .author img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .author-info h4 {
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        .author-info span {
-            font-size: 0.85rem;
-            opacity: 0.8;
-        }
-
-        /* Gallery Section */
-        .gallery {
-            background: var(--off-white);
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-            aspect-ratio: 1;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-overlay span {
-            color: var(--branco);
-            font-size: 0.9rem;
-            font-weight: 500;
-            background: var(--azul-rox);
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-        }
-
         /* Contact Section */
         .contact {
             background: var(--off-white);
@@ -1014,14 +966,14 @@
         }
 
 
-        /* Animation classes */
-        .aos-init {
+        /* Scroll reveal animations (native, no AOS dependency) */
+        .reveal {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
-        .aos-animate {
+        .reveal.revealed {
             opacity: 1;
             transform: translateY(0);
         }
@@ -1033,27 +985,26 @@
     <!-- Mobile Menu Overlay -->
     <div class="menu-overlay" id="menuOverlay"></div>
 
-    <nav class="nav" id="navbar">
-        <a href="#" class="nav-logo" onclick="closeMobileMenu()">
-            <img src="logo_texto.svg" alt="Roque Logo">
-            <span>Roque</span>
-        </a>
-        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Abrir menu">
-            <i class="fas fa-bars"></i>
-        </button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home" onclick="closeMobileMenu()">Início</a></li>
-            <li><a href="#about" onclick="closeMobileMenu()">Sobre</a></li>
-            <li><a href="#services" onclick="closeMobileMenu()">Serviços</a></li>
-            <li><a href="#team" onclick="closeMobileMenu()">Equipe</a></li>
-            <li><a href="#testimonials" onclick="closeMobileMenu()">Depoimentos</a></li>
-            <li><a href="#gallery" onclick="closeMobileMenu()">Galeria</a></li>
-            <li><a href="#contact" class="nav-cta" onclick="closeMobileMenu()">Contato</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="nav" id="navbar" role="navigation">
+            <a href="#" class="nav-logo" onclick="closeMobileMenu()">
+                <img src="logo_texto.svg" alt="Roque Serviços Veterinários" width="160" height="50">
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" onclick="closeMobileMenu()">Início</a></li>
+                <li><a href="#about" onclick="closeMobileMenu()">Sobre</a></li>
+                <li><a href="#services" onclick="closeMobileMenu()">Serviços</a></li>
+                <li><a href="#team" onclick="closeMobileMenu()">Equipe</a></li>
+                <li><a href="#contact" class="nav-cta" onclick="closeMobileMenu()">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home" data-aos="fade-up" data-aos-duration="1000">
+    <section class="hero reveal" id="home">
         <div class="hero-content">
             <h1>Precisão Científica <br>para a <span>Saúde Animal</span></h1>
             <p>Serviços veterinários especializados em patologia transcirúrgica, citologia diagnóstica e coleta de
@@ -1070,7 +1021,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="section about" id="about" data-aos="fade-up" data-aos-duration="1000">
+    <section class="section about reveal" id="about">
         <div class="about-grid">
             <div class="about-text">
                 <div class="section-header" style="text-align: left;">
@@ -1086,30 +1037,30 @@
                     bem-estar animal e na segurança da equipe veterinária assistente.</p>
 
                 <div class="about-values">
-                    <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-card reveal">
                         <i class="fas fa-microscope"></i>
                         <h4>Precisão Científica</h4>
                         <p>Procedimentos baseados em evidências e tecnologia de ponta</p>
                     </div>
-                    <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-card reveal">
                         <i class="fas fa-heartbeat"></i>
                         <h4>Cuidado Humanizado</h4>
                         <p>Atenção empática e respeito ao bem-estar animal</p>
                     </div>
-                    <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-card reveal">
                         <i class="fas fa-flask"></i>
                         <h4>Excelência Diagnóstica</h4>
                         <p>Análises precisas para tratamentos eficazes</p>
                     </div>
-                    <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="value-card reveal">
                         <i class="fas fa-user-md"></i>
                         <h4>Inovação Cirúrgica</h4>
                         <p>Técnicas avançadas para procedimentos de alta complexidade</p>
                     </div>
                 </div>
             </div>
-            <div class="about-image" data-aos="zoom-in" data-aos-duration="1000">
-                <img src="clina.png" alt="Atendimento veterinário a campo">
+            <div class="about-image reveal">
+                <img src="clina.webp" alt="Dra. realizando análise citológica em clínica parceira" loading="lazy">
             </div>
         </div>
     </section>
@@ -1125,7 +1076,7 @@
 
         <div class="services-grid">
             <!-- Transcirurgia - Em Breve -->
-            <div class="service-card featured" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card featured reveal">
                 <div class="service-icon">
                     <i class="fas fa-surgery"></i>
                 </div>
@@ -1138,7 +1089,7 @@
             </div>
 
             <!-- Citologia -->
-            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card reveal">
                 <div class="service-icon">
                     <i class="fas fa-microscope"></i>
                 </div>
@@ -1147,7 +1098,7 @@
             </div>
 
             <!-- Coleta -->
-            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card reveal">
                 <div class="service-icon">
                     <i class="fas fa-tint"></i>
                 </div>
@@ -1166,12 +1117,12 @@
         </div>
 
         <div class="team-grid">
-            <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member reveal">
                 <div class="team-img">
-                    <img src="taina.jpg" alt="Médica Tainá Roque">
+                    <img src="taina.jpg" alt="Médica Tainá Roque" width="200" height="200" loading="lazy">
                 </div>
                 <h3>Médica Tainá Roque</h3>
-                <span>Médica & Patologista</span>
+                <p>Médica &amp; Patologista</p>
             </div>
 
         </div>
@@ -1188,7 +1139,7 @@
                     atendimento ou tirar dúvidas sobre os serviços disponíveis.</p>
 
                 <div class="contact-details">
-                    <div class="contact-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-item reveal">
                         <i class="fas fa-phone"></i>
                         <div class="contact-item-content">
                             <h4>Telefone</h4>
@@ -1196,7 +1147,7 @@
                                 9284-1805</a>
                         </div>
                     </div>
-                    <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-item reveal">
                         <i class="fas fa-envelope"></i>
                         <div class="contact-item-content">
                             <h4>Email</h4>
@@ -1207,9 +1158,8 @@
                 </div>
             </div>
 
-            <div class="contact-right">
-                <a href="https://wa.me/556492841805" target="_blank" class="whatsapp-btn" data-aos="fade-up"
-                    data-aos-delay="400">
+            <div class="contact-right reveal">
+                <a href="https://wa.me/556492841805" target="_blank" class="whatsapp-btn">
                     <i class="fab fa-whatsapp"></i> Fale no WhatsApp
                 </a>
             </div>
@@ -1266,14 +1216,19 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
+        // Reveal elements on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
         });
 
         // Navigation Scroll Effect
@@ -1327,22 +1282,7 @@
         });
 
 
-        // Testimonial Swiper
-        new Swiper('#testimonialSwiper .swiper', {
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '#testimonialSwiper .swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '#testimonialSwiper .swiper-button-next',
-                prevEl: '#testimonialSwiper .swiper-button-prev',
-            },
-        });
+
     </script>
 </body>
 
